@@ -1,0 +1,15 @@
+.example-card {
+  width: 400px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.image img{
+    max-height: 220px;
+    object-fit: cover;
+}
