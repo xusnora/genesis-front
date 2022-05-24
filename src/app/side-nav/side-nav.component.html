@@ -1,7 +1,5 @@
 <mat-list role="list">
-  <mat-list-item role="listitem">Еда</mat-list-item>
-  <mat-list-item role="listitem">Спорт товары</mat-list-item>
-  <mat-list-item role="listitem">Машины</mat-list-item>
+  <ng-container *ngFor="let category of categories">
+    <mat-list-item role="listitem">{{ category.name }}</mat-list-item>
+  </ng-container>
 </mat-list>
-
-

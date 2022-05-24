@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoriesService } from '../servises/categories.service';
 
 @Component({
   selector: 'app-categories',
@@ -6,34 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.scss'],
 })
 export class CategoriesComponent implements OnInit {
-  public categories = [
-    {
-      name: 'Еда',
-      url: 'assets/images/food.jpg',
-    },
-    {
-      name: 'Молочные продукты',
-      url: 'assets/images/milk.jpg',
-    },
-    {
-      name: 'Цветы',
-      url: 'assets/images/flowers.jpg',
-    },
-    {
-      name: 'Книги',
-      url: 'assets/images/books.jpg',
-    },
-    {
-      name: 'Электроника',
-      url: 'assets/images/electronics.jpeg',
-    },
-    {
-      name: 'Игрушки',
-      url: 'assets/images/Toys.jpg',
-    },
-  ];
+  public categories = this.categoriesService.categories;
 
-  constructor() {}
+  constructor(private categoriesService: CategoriesService) {}
 
   ngOnInit(): void {}
 }
