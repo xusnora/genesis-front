@@ -1,5 +1,6 @@
-.example-card {
+.category-card {
   width: 400px;
+  overflow: hidden;
 }
 
 .categories {
@@ -9,7 +10,7 @@
   padding: 20px;
 }
 
-.image img{
-    max-height: 220px;
-    object-fit: cover;
+.image img {
+  max-height: 220px;
+  object-fit: cover;
 }
