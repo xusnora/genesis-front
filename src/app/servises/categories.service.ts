@@ -4,6 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class CategoriesService {
+  public products = [
+    {
+      name: 'Еда',
+      url: 'assets/images/food.jpg',
+    },
+  ];
+
   public categories = [
     {
       name: 'Еда',
