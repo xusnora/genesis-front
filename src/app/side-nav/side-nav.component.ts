@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriesService } from '../servises/categories.service';
+import { CategoriesService } from '../services/categories.service';
 
 @Component({
   selector: 'app-side-nav',
