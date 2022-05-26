@@ -2,7 +2,11 @@
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>Genesis</span>
+  <div class="top_nav">
+    <span>Genesis</span>
+    <span><a routerLink="/products">products</a></span>
+    <span><a routerLink="/">categories</a></span>
+  </div>
   <span class="example-spacer"></span>
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
@@ -14,5 +18,5 @@
 
 <main>
   <app-side-nav class="nav"> </app-side-nav>
-  <app-categories> </app-categories>
+  <router-outlet> </router-outlet>
 </main>

@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CategoriesComponent } from './categories/categories.component';
     LayoutComponent,
     SideNavComponent,
     CategoriesComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
