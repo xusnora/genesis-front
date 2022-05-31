@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api-services/api.service';
 import { CategoriesService } from '../services/categories.service';
+
+interface Category {
+  name: string;
+  url: string;
+}
 
 @Component({
   selector: 'app-categories',
@@ -7,13 +13,15 @@ import { CategoriesService } from '../services/categories.service';
   styleUrls: ['./categories.component.scss'],
 })
 export class CategoriesComponent implements OnInit {
-
   public isLoading: boolean = false;
 
-  public categories = this.categoriesService.categories;
+  public categories: Category[] = [];
 
+  constructor(private api: ApiService) {}
 
-  constructor(private categoriesService: CategoriesService) {}
-
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.api.categories.getAll().subscribe((data) => {
+      this.categories = data;
+    });
+  }
 }
