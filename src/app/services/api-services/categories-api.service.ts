@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
 import { FAKE_CATEGORIES, FakeDataService } from 'src/app/data/fake-data';
 
@@ -88,7 +88,7 @@ export class CategoriesApiService {
    * @param id identificator of category
    * @returns updated list or old list
    */
-  public remove(id: number) {
+  public remove(id: number): Observable<any[]> {
     const categories = this.fakeDataService.getList(KEY, FAKE_CATEGORIES);
 
     const category = categories.find((c: any) => c.id === id);

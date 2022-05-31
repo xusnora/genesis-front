@@ -15,12 +15,11 @@ interface Category {
 })
 export class CategoriesComponent implements OnInit {
   public isLoading: boolean = false;
-
   public categories: Category[] = [];
 
   constructor(private api: ApiService) {}
 
-  public ngOnInit() {
+  public ngOnInit(): void {
     this.isLoading = true;
 
     this.api.categories.getAll().subscribe((data) => {

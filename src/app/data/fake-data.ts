@@ -86,7 +86,6 @@ export const FAKE_PRODUCTS = [
  * Keyin buni o'rniga backend ulanadi.
  * Bu service ma'lumotlarni vaqtinchalik browseringizni o'zida saqlaydi.
  */
-
 @Injectable({ providedIn: 'root' })
 export class FakeDataService {
   /**
