@@ -1,12 +1,12 @@
 <div class="categories">
-    <ng-container *ngFor="let product of products">
-      <mat-card class="product-card">
-        <div class="image">
-          <img mat-card-image [src]="product.url" alt="Photo of a Shiba Inu" />
-        </div>
-        <mat-card-content>
-          <h3>{{ product.name }}</h3>
-        </mat-card-content>
-      </mat-card>
-    </ng-container>
-  </div>
+  <ng-container *ngFor="let product of products">
+    <mat-card class="product-card">
+      <div class="image">
+        <img mat-card-image [src]="product.url" alt="Photo of a Shiba Inu" />
+      </div>
+      <mat-card-content>
+        <h3>{{ product.name }}</h3>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
