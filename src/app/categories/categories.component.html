@@ -1,12 +1,16 @@
-<div class="categories">
-  <ng-container *ngFor="let category of categories">
-    <mat-card class="category-card">
-      <div class="image">
-        <img mat-card-image [src]="category.url" alt="Photo of a Shiba Inu" />
-      </div>
-      <mat-card-content>
-        <h3>{{ category.name }}</h3>
-      </mat-card-content>
-    </mat-card>
-  </ng-container>
-</div>
+<ng-container *ngIf="!isLoading; else loading">
+  <div class="categories">
+    <ng-container *ngFor="let category of categories">
+      <mat-card class="category-card">
+        <div class="image">
+          <img mat-card-image [src]="category.url" [alt]="category.name" />
+        </div>
+        <mat-card-content>
+          <h3>{{ category.name }}</h3>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </div>
+</ng-container>
+
+<ng-template #loading> Loading... </ng-template>

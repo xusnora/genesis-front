@@ -7,7 +7,11 @@ import { CategoriesService } from '../services/categories.service';
   styleUrls: ['./categories.component.scss'],
 })
 export class CategoriesComponent implements OnInit {
+
+  public isLoading: boolean = false;
+
   public categories = this.categoriesService.categories;
+
 
   constructor(private categoriesService: CategoriesService) {}
 
