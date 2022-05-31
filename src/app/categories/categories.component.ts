@@ -5,6 +5,7 @@ import { CategoriesService } from '../services/categories.service';
 interface Category {
   name: string;
   url: string;
+  id: number;
 }
 
 @Component({
@@ -19,9 +20,22 @@ export class CategoriesComponent implements OnInit {
 
   constructor(private api: ApiService) {}
 
-  ngOnInit(): void {
+  public ngOnInit() {
+    this.isLoading = true;
+
     this.api.categories.getAll().subscribe((data) => {
       this.categories = data;
+      this.isLoading = false;
     });
+  }
+
+  public remove(category: Category) {
+    if (confirm('Are you sure?')) {
+      this.isLoading = true;
+      this.api.categories.remove(category.id).subscribe((data) => {
+        this.categories = data;
+        this.isLoading = false;
+      });
+    }
   }
 }

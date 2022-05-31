@@ -1,3 +1,5 @@
+import { Injectable } from '@angular/core';
+
 export const FAKE_CATEGORIES = [
   {
     id: 1,
@@ -26,6 +28,21 @@ export const FAKE_CATEGORIES = [
   },
   {
     id: 6,
+    name: 'Toys',
+    url: 'assets/images/Toys.jpg',
+  },
+  {
+    id: 7,
+    name: 'Toys',
+    url: 'assets/images/Toys.jpg',
+  },
+  {
+    id: 8,
+    name: 'Toys',
+    url: 'assets/images/Toys.jpg',
+  },
+  {
+    id: 9,
     name: 'Toys',
     url: 'assets/images/Toys.jpg',
   },
@@ -69,6 +86,8 @@ export const FAKE_PRODUCTS = [
  * Keyin buni o'rniga backend ulanadi.
  * Bu service ma'lumotlarni vaqtinchalik browseringizni o'zida saqlaydi.
  */
+
+@Injectable({ providedIn: 'root' })
 export class FakeDataService {
   /**
    * LocalStorage ichiga saqlab qo'yilgan ma'lumotlarni beradi
